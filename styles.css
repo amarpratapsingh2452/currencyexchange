@@ -32,12 +32,20 @@ body{
     height: 40px;
     margin:25px;
 }
-.input{
+#amount{
     margin:25px;
     width:200px;
     background-color:azure;
     height: 28px;
     border-radius: 5px;
+}
+#result{
+    margin:25px;
+    width:200px;
+    background-color:azure;
+    height: 28px;
+    border-radius: 5px;
+    align-items: center;
 }
 input{
     width:200px;
@@ -45,7 +53,7 @@ input{
     padding:0px;
     border-radius:5px;
 }
-.btn{
+#btn{
     height: 40px;
     background-color: #8fce8f;
     align-content: center;
@@ -54,7 +62,7 @@ input{
     width:150px;
     margin-left:180px
 }
-.btn:hover{
+#btn:hover{
     cursor: pointer;
     background-color:#7D9E7D
 }
