@@ -20,10 +20,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         resultDiv.textContent = "Calculating...";
 
-        const apiUrl = `https://latest.currency-api.pages.dev/v1/currencies/${fromCurrency}.json`;
+       
+        const apiUrl = `https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${fromCurrency}.json`;
 
         try {
-            
+           
             const response = await fetch(apiUrl);
             if (!response.ok) {
                 throw new Error("Network response was not ok.");
@@ -34,15 +35,16 @@ document.addEventListener("DOMContentLoaded", function () {
             const rate = data[fromCurrency][toCurrency];
 
             if (rate) {
-              
+                
                 const convertedAmount = (amount * rate).toFixed(2);
                 resultDiv.textContent = `${convertedAmount} ${toCurrency.toUpperCase()}`;
             } else {
-                resultDiv.textContent = "Conversion rate not available for the selected currencies.";
+                resultDiv.textContent = "Conversion rate not available.";
             }
         } catch (error) {
             console.error("Error fetching or parsing data:", error);
-            alert("Error: Could not retrieve exchange rates.")
+            alert("Error: Could not retrieve exchange rates. The API might be down or the currency is not supported.");
+            resultDiv.textContent = ""; 
         }
     });
 });
