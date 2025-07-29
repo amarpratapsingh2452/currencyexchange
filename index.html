@@ -11,7 +11,7 @@
         <h1>Currency Calculator</h1>
     <div class ="container">
         <div class="choices">
-     <select id="currency-select" name="currency">
+     <select id="from-currency" name="currency">
   
   <option value="" disabled selected>-- Choose a currency --</option>
   <optgroup label="Popular Currencies"></optgroup>
@@ -179,7 +179,7 @@
 </select>
         </div>
         <div class="choices">
-            <select id="currency-select" name="currency">
+            <select id="to-currency" name="currency">
    <option value="" disabled selected>--Currency to be Converted --</option>
   <optgroup label="Popular Currencies"></optgroup>
   <option value="usd">USD - United States Dollar</option>
@@ -345,9 +345,9 @@
   </optgroup>
 </select>
         </div>
-        <div class="input"><input type ="number" placeholder ="Enter Amount"></input></div>
-        <div class="input"></div></div>
-        <div class="btn">Calculate</div>
+        <div id="amount"><input type ="number" placeholder ="Enter Amount" value="1"></input></div>
+        <div id="result"></div></div>
+        <div id="btn">Calculate</div>
     </div>
 <script src="script.js"></script>
 </body>
